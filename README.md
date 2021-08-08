@@ -6,7 +6,7 @@
 
 - Create .NET Core Web API project with CLI
 
-```
+```bat
 dotnet new webapi -o TrainingWebApi --no-https
 ```
 
@@ -19,7 +19,7 @@ dotnet new webapi -o TrainingWebApi --no-https
 
 - Docker file is generated automatically as below
 
-```
+```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -49,19 +49,19 @@ ENTRYPOINT ["dotnet", "TrainingWebApi.dll"]
 
 - Build docker image
 
-```
+```bat
 docker build -t training-webapi:v1 .
 ```
 
 - See image generated
 
-```
+```bat
 docker images
 ```
 
 ## Run docker image
 
-```
+```bat
 docker run -it --rm -p 8080:80 training-webapi:v1
 ``` 
 
